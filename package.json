@@ -1,11 +1,16 @@
 {
   "name": "handsjobs",
   "version": "0.0.0",
+  "engines": {
+    "node": "8.2.1"
+  },
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng build && node Server.js",
+    "build": "ng build && node Server.js",
+    "preinstall": "npm install -g @angular/cli",
+    "postinstall": "ng build --aot -prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -13,9 +18,11 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.1",
+	"@angular/cli": "1.5.0",
     "@angular/cdk": "^5.0.0-rc0",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
+	"@angular/compiler-cli": "^5.0.0",
     "@angular/core": "^5.0.0",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
@@ -26,6 +33,7 @@
     "angularfire2": "^5.0.0-rc.1",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
+	"express": "^4.16.2",
     "firebase": "^4.5.0",
     "jquery": "^3.2.1",
     "material-design-icons": "^3.0.1",
@@ -35,8 +43,6 @@
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.0",
-    "@angular/compiler-cli": "^5.0.0",
     "@angular/language-service": "^5.0.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
