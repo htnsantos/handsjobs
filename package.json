@@ -40,7 +40,8 @@
     "ngx-infinite-scroll": "^0.6.1",
     "ngx-order-pipe": "^1.1.0",
     "rxjs": "^5.5.2",
-    "zone.js": "^0.8.14"
+    "zone.js": "^0.8.14",
+	"protractor": "~5.1.2"
   },
   "devDependencies": {
     "@angular/language-service": "^5.0.0",
