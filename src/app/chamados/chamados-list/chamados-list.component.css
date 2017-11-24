@@ -1,0 +1,32 @@
+.material-icons.md-32 { 
+    font-size: 32px; 
+}
+
+.icon-user {
+    float: left; 
+    padding-top: 7px; 
+    padding-right: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.tp-15 {
+    margin-top: 18px;
+}
+
+.h-30 {
+    height: 30px !important;
+    color: rgba(0,0,0,.54);
+    font-size: 14px;
+}
+
+.h-30:hover {
+    background: #fafafa;
+    color: #3f51b5;
+    cursor: pointer;
+}
+
+.active {
+    background: #fafafa;
+    color: #3f51b5;
+}

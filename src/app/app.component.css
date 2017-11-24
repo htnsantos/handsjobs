@@ -1,0 +1,23 @@
+.navbar-default {
+    background: #3f51b5;
+}
+
+.color-menu {
+    color: white !important;     
+    font-family: Roboto,Helvetica Neue,sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.material-icons.md-30 { 
+    font-size: 30px; 
+}
+
+.icon-user {
+    float: left; 
+    padding-top: 10px; 
+    color:white;
+    padding-right: 5px;
+    height: 40px;
+    width: 40px;
+}

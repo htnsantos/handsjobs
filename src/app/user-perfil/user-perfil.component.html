@@ -1,0 +1,61 @@
+<div class="col-md-10 col-md-offset-1">
+<form #formCadastro='ngForm' (ngSubmit)="updateUser(formCadastro)">
+    <mat-horizontal-stepper [linear]="isLinear" style="margin-top: 36px">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Dados Pessoais</ng-template>
+
+          <mat-form-field class="col-md-8 col-md-offset-2">
+            <input matInput placeholder="Nome" formControlName="displayName" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-8 col-md-offset-2">
+            <input matInput placeholder="Telefone" formControlName="phone" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-8 col-md-offset-2">
+            <input matInput placeholder="E-mail" formControlName="email" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-8 col-md-offset-2">
+            <input matInput placeholder="Cidade" formControlName="city" required>
+          </mat-form-field>
+
+          <div class="col-md-8 col-md-offset-2">
+            <mat-checkbox class="example-margin" formControlName="exibirDados">Exibir dados no perfil</mat-checkbox>
+            <button mat-raised-button color="primary" matStepperNext class="pull-right">Próximo</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Experiências Profissionais</ng-template>
+
+          <mat-form-field class="col-md-8 col-md-offset-2">
+            <input matInput placeholder="Nome da Empresa" formControlName="businessName" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-8 col-md-offset-2">
+            <input matInput placeholder="Cargo" formControlName="profession" required>
+          </mat-form-field>
+
+          <mat-form-field class="col-md-8 col-md-offset-2">
+            <textarea matInput placeholder="Principais Atividades" formControlName="activities" required></textarea>
+          </mat-form-field>
+          <div class="col-md-8 col-md-offset-2">
+            <button mat-raised-button color="basic" matStepperPrevious>Anterior</button>
+            <button mat-raised-button color="primary" class="pull-right" matStepperNext>Próximo</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Finalizar</ng-template>
+        Fim do cadastro.
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button type="submit" mat-raised-button color="primary">Concluir</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+</form>
+</div>

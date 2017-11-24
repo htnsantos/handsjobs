@@ -1,0 +1,41 @@
+<div class="services-header">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+</div>
+
+<div class="services-container mat-elevation-z8">
+
+  <mat-table [dataSource]="dataSource" matSort class="customScroll">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.userId}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="progress">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.type.id == 'oferecer' ? 'Oferecendo' : 'Procurando'}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Publicador </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.userName}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="color">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Data Publicação </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.date | date: 'dd/MM/yyyy hh:mm:ss'}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

@@ -1,0 +1,11 @@
+<mat-card class="card-message" *ngFor="let contact of contacts | async">
+  <mat-card-header style="padding-bottom: 4px">
+    <div mat-card-avatar class="header-image">
+      <img src="{{contact.userPhoto}}" class="icon-user photo-perfil" />
+    </div>
+    <div class="header-text">
+      <mat-card-title class="username" (click)="selectedPerfil(contact)">{{ contact.userName }}</mat-card-title>
+      <mat-card-subtitle>{{ contact.profession }}</mat-card-subtitle>
+    </div>
+  </mat-card-header>
+</mat-card>

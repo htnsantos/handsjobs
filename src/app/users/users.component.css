@@ -1,0 +1,173 @@
+#toolbar {
+    padding:0;
+    width:100%;
+}
+
+header {
+    background:#3B8598;
+    width:100%;
+}
+
+.yy {
+    margin-top: -55px;
+}
+
+.basic-btn {
+    width:100px;
+    margin:0;
+}
+
+.tp-10 {
+    top: 10px;
+}
+
+#page {
+    padding:3em;
+    margin:0;
+}
+
+#page img {
+    margin-top:30px;
+}
+
+h2 {
+    margin:0;
+}
+
+.username {
+    color: #3f51b5;
+}
+.username:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.user-container {    
+    position:fixed;
+    height: 100%;
+}
+
+.container-right {
+    float: right;
+    height: 100%;
+    background: white;
+}
+.scroll-down {
+    height:  400px;
+    overflow-y: scroll;    
+}
+
+.scroll-down-message {
+    height:  80vh;
+    overflow-y: auto;    
+}
+
+.customScroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 1px transparent;
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.customScroll::-webkit-scrollbar
+{
+	width: 0px;
+	background-color: transparent;
+}
+
+.customScroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 1px transparent;
+	background-color: transparent;
+}
+
+.tableScroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.tableScroll::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+.tableScroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.messages-list {
+    margin-top: 8%;
+}
+
+.card-message {
+    margin-bottom: 2%;
+}
+
+.message-header-image {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+}
+
+.wrapper {
+    padding-top: 5%;
+}
+
+@media(max-width:992px){
+ .wrapper{
+  width:100%;
+} 
+}
+.panel-heading {
+    padding: 0;
+	border:0;
+}
+.panel-title>a, .panel-title>a:active{
+	display:block;
+	padding:15px;
+    color:#555;
+    font-size:14px;
+    font-weight:bold;
+	letter-spacing:1px;
+    word-spacing:3px;
+	text-decoration:none;
+}
+.panel-heading  a:before {
+   font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+}
+.panel-heading.active a:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.post-full-width {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+    #toolbar {
+        width:90%;
+        margin-left: -45%;
+    }
+}

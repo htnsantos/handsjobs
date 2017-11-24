@@ -1,0 +1,7 @@
+<mat-list *ngFor="let c of usuarios | async" >
+     <div class="row">
+      <img src="{{c.userPhoto}}" class="avatar-interessados" />   
+      <mat-list-item class="customScroll" (click)="register_popup(c.id, c.userName)"> 
+          <label class="nome-contact">{{ c.userName }} </label></mat-list-item>
+     </div>
+</mat-list>

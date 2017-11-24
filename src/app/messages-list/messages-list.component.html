@@ -1,0 +1,17 @@
+<mat-card class="card-message"  *ngFor="let message of messages | async">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <!--img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"-->
+  <mat-card-content>
+    <p>
+      {{message.nome}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="" color="primary">Interessei</button>
+  </mat-card-actions>
+  <br>
+</mat-card>

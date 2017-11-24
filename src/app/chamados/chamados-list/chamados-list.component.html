@@ -1,0 +1,69 @@
+
+<mat-accordion>
+
+      <mat-expansion-panel class="tp-15">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <i class="material-icons">local_library</i> Acadêmico
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+       
+        <mat-list *ngFor="let a of academicos; let i = index; trackBy:trackByIndex" >
+            <mat-list-item class="h-30" (click)="categorySelected(academicos[i], i)" 
+            [class.active]="i == selectedRow"> {{academicos[i]}} </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <i class="material-icons">computer</i>Computação
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-list *ngFor="let c of computacao; let i = index; trackBy:trackByIndex" >
+            <mat-list-item class="h-30"  (click)="categorySelected(computacao[i], i)" [class.active]="i == selectedRow"> {{computacao[i]}} </mat-list-item>
+        </mat-list>
+        
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <i class="material-icons">home</i> Construção
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <mat-list *ngFor="let a of construcao; let i = index; trackBy:trackByIndex" >
+            <mat-list-item class="h-30" (click)="categorySelected(construcao[i], i)" [class.active]="i == selectedRow"> {{construcao[i]}} </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <i class="material-icons">build</i>Manutenção de Veículos
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        
+        <mat-list *ngFor="let a of manutencaoVeiculos; let i = index; trackBy:trackByIndex" >
+            <mat-list-item class="h-30" (click)="categorySelected(manutencaoVeiculos[i], i)" [class.active]="i == selectedRow"> {{manutencaoVeiculos[i]}} </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <i class="material-icons">directions_car</i>Motoristas
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        
+        <mat-list *ngFor="let a of motoristas; let i = index; trackBy:trackByIndex" >
+            <mat-list-item class="h-30" (click)="categorySelected(motoristas[i], i)" [class.active]="i == selectedRow"> {{motoristas[i]}} </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+
+    </mat-accordion>

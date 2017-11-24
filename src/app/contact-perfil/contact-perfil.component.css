@@ -1,0 +1,23 @@
+.fundo-perfil {
+    background: white;
+    margin-top: 2%;
+}
+
+.photo-perfil {
+    height: 140px;
+    width: 140px;
+}
+
+.username-contact {
+    padding-top: 60px;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}
+
+.fundo-activities {
+    background: white;
+    margin-top: 1%;
+}
+
+.btn-adicionar {
+    bottom: 40px;
+}

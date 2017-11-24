@@ -1,0 +1,97 @@
+<div class="container col-md-12">
+
+    <div class="user-container col-md-3">
+
+        <app-chamados-list></app-chamados-list>
+
+    </div>
+
+
+    <div class="container col-md-7" style="left: 25%" *ngIf="initialScreen">
+        <h3>Lista as Publicações dos Amigos</h3>
+    </div>
+
+    <div class="col-md-7 customScroll" style="left: 25%" *ngIf="!initialScreen">
+
+        <mat-tab-group>
+
+            <mat-tab label="Publicações">
+                <div class="scroll-down-message customScroll">
+                    <form #formCadastro='ngForm' (ngSubmit)="doPublish(formCadastro)">
+
+                        <mat-form-field class="post-full-width tp-10">
+
+                            <textarea matInput placeholder="Publique o que você está procurando" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="2"
+                                class="customScroll" [(ngModel)]="message" name="message" required></textarea>
+
+                        </mat-form-field>
+
+                        <div class="col-md-8 pull-right">
+                            <div class="col-md-9" style="padding-left: 25%">
+                                <mat-form-field>
+                                    <mat-select placeholder="Selecione" [FormControl]="typeControl" [(ngModel)]="type" name="type" required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let type of types" [value]="type">
+                                            {{type.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="typeControl.hasError('required')">Selecione o tipo</mat-error>
+                                    <mat-hint>{{typeControl.value?.id}}</mat-hint>
+                                </mat-form-field>
+                            </div>
+
+                            <button type="submit" class="pull-right " mat-raised-button color="primary">Publicar</button>
+                            <!--i class="material-icons pull-right">panorama</i-->
+                        </div>
+                    </form>
+
+                    <div class="messages-list">
+                        <mat-card class="card-message" *ngFor="let message of messages | async  | reverse">
+                            <mat-card-header>
+                                <div mat-card-avatar>
+                                    <img src="{{message.userPhoto}}" class="message-header-image" />
+                                </div>
+                                <mat-card-title class="username" (click)="selectUserperfil(message)">{{message.userName}}</mat-card-title>
+                                <mat-card-subtitle>{{message.type.id == 'oferecer' ? '(Oferecendo)' : '(Procurando)'}}</mat-card-subtitle>
+                            </mat-card-header>
+                            <!--img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"-->
+                            <mat-card-content>
+                                <p>
+                                    {{message.nome}}
+                                </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-raised-button class="" (click)="doInterest(message)" color="primary">Interessei</button>
+                            </mat-card-actions>
+                            <br>
+                        </mat-card>
+                    </div>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Meus Serviços">
+                <div class="scroll-down-message tableScroll">
+                    <app-my-services></app-my-services>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Meus Interesses">
+                <div class="scroll-down-message tableScroll">
+                    <app-my-interests></app-my-interests>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Contatos">
+                <div class="scroll-down-message tableScroll">
+                    <app-contacts></app-contacts>
+                </div>    
+            </mat-tab>
+        </mat-tab-group>
+
+    </div>
+
+    <div class="col-md-2  pull-right" style="border-left: 1px solid #ccc;" [ngClass]="{'yy': initialScreen === true }">
+        <app-users-list></app-users-list>
+    </div>
+
+</div>

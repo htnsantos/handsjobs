@@ -1,0 +1,104 @@
+.h-30 {
+    height: 30px !important;
+}
+
+.icon-user {
+    float: left; 
+    padding-top: 7px; 
+    padding-right: 5px;
+}
+
+/*Chat Popup */
+@media only screen and (max-width: 540px) {
+    .chat-sidebar {
+        display: none !important;
+    }
+    .chat-popup {
+        display: none !important;
+    }
+}
+
+.chat-sidebar {
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgba(29, 49, 91, .3);
+}
+
+.nome-contact:hover {
+    cursor: pointer;
+}
+/*.sidebar-name {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+.sidebar-name span {
+    padding-left: 5px;
+}
+.sidebar-name a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+.sidebar-name:hover {
+    background-color: #e1e2e5;
+}
+.sidebar-name img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+} */
+.popup-box {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 240px;
+    height: 285px;
+    background-color: rgb(237, 239, 244);
+    width: 270px;
+    border: 1px solid rgba(29, 49, 91, .3);
+    z-index: 9999;
+    margin-bottom: 15px;
+}
+.popup-box .popup-head {
+    background-color: #3f51b5;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    clear: both;
+}
+
+.nome-contact{
+  font-size: 13px;
+  color: black;
+  font-family: Roboto,Helvetica Neue,sans-serif;
+  font-weight: 100;
+}
+
+.row {
+    margin-left: 1px;
+}
+.popup-box .popup-head .popup-head-left {
+    float: left;
+}
+.popup-box .popup-head .popup-head-right {
+    float: right;
+    opacity: 0.5;
+}
+.popup-box .popup-head .popup-head-right a {
+    text-decoration: none;
+    color: inherit;
+}
+.popup-box .popup-messages {
+    height: 100%;
+    overflow-y: scroll;
+}
+/*Chat Popup */

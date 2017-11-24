@@ -1,0 +1,22 @@
+<nav *ngIf="mostrarMenu" class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+       <img src="{{name.photoURL}}" class="icon-user img-circle"/><a class="navbar-brand color-menu" routerLink="/perfil-usuario">{{ name.displayName }}</a>
+    
+    </div>
+
+    <ul class="nav navbar-nav pull-right">
+        <li  routerLink="/users">
+            <a class="color-menu">Página Principal</a>
+        </li>
+        <li routerLinkActive="active">
+            <a (click)="logout()" class="color-menu">Logout</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

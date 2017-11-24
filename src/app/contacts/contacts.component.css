@@ -1,0 +1,18 @@
+.header-image{
+    height: 140px !important;
+    width: 140px !important;
+}
+
+.header-text {
+    margin-top: 20px !important;
+    margin-left: -20px !important;
+}
+
+.username {
+    color: #3f51b5;
+}
+
+.username:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

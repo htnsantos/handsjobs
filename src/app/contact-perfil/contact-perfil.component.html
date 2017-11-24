@@ -1,0 +1,11 @@
+<div class="col-md-8 fundo-perfil col-md-offset-2">
+
+  <img src="{{userPhoto}}" class="icon-user photo-perfil"/>
+  <h3 class="username-contact">{{userName}}</h3>
+  <h5 class=""> {{ profession }}</h5>
+  <button *ngIf="!isMyContact" mat-raised-button class="pull-right btn-adicionar" (click)="doContact()" color="primary">Adicionar Contato</button>
+  <button *ngIf="isMyContact" mat-raised-button class="pull-right btn-adicionar" (click)="removeContact()" color="basic">Contatos</button>
+</div>
+<div class="col-md-8  fundo-activities col-md-offset-2">
+  <p> {{activities}}</p>
+</div>
