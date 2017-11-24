@@ -10,6 +10,7 @@ import { Component, OnInit, EventEmitter, ChangeDetectorRef } from '@angular/cor
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
+import * as $ from 'jquery';
 import { Router, NavigationExtras } from '@angular/router';
 import { moveIn, fallIn, moveInLeft } from '../router.animations';
 import { NgForm, FormControl, Validators } from '@angular/forms';
